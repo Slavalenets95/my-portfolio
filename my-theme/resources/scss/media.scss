@@ -1,0 +1,221 @@
+@media screen and (max-width: 996px) {
+  /*** GLOBAL ***/
+  body {
+    font-size: 28px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+  /*** END GLOBAL ***/
+
+  /*** HEADER ***/
+  .header-nav {
+    display: none;
+  }
+
+  .hamburger-btn {
+    margin-left: auto;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    display: flex;
+
+    & svg {
+      width: 40px;
+      height: 40px;
+      fill: $main_color;
+    }
+  }
+
+  .mobile-menu {
+    transition: all .5s ease;
+
+    &__close-btn {
+      display: none;
+      background-color: transparent;
+      border: none;
+      position: absolute;
+      top: 35px;
+      right: 35px;
+
+      & > svg {
+        fill: $main_color;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &.active {
+      display: flex;
+      visibility: visible;
+      left: 0;
+    }
+
+    &.active &__close-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    & li:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  /*** END HEADER ***/
+
+  /*** INTRO ***/
+
+  .intro {
+    & > .container {
+      padding-top: 70px;
+    }
+
+    &__title {
+      font-size: 70px;
+    }
+
+    &__sub-title {
+      font-size: 50px;
+    }
+  }
+
+  /*** END INTRO ***/
+
+  /*** ABOUT ***/
+
+  .about {
+    &__content {
+      margin-top: 60px;
+    }
+  }
+
+  /*** END ABOUT ***/
+
+  /*** SKILLS ***/
+
+  .skills {
+    &__content {
+      font-size: 40px;
+      margin-top: 60px;
+    }
+  }
+
+  /*** END SKILLS ***/
+
+  /*** PROJECTS ***/
+
+  .projects {
+    &__title {
+      margin-bottom: 60px;
+    }
+
+    &__show-more {
+      font-size: 30px;
+    }
+  }
+
+  .project-item {
+    flex-direction: column !important;
+
+    &__img-block,
+    &__content-block {
+      width: 100%;
+    }
+
+    &__content-block {
+      margin-right: 0 !important;
+    }
+  }
+
+  /*** END PROJECTS ***/
+}
+
+@media screen and (max-width: 600px) {
+  /*** GLOBAL ***/
+  body {
+    font-size: 22px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+  /*** END GLOBAL ***/
+
+  /*** INTRO ***/
+
+  .intro {
+    & > .container {
+      padding-top: 40px;
+    }
+
+    &__title {
+      font-size: 40px;
+    }
+
+    &__sub-title {
+      font-size: 32px;
+    }
+  }
+
+  /*** END INTRO ***/
+
+  /*** ABOUT ***/
+
+  .about {
+    &__content {
+      padding: 20px;
+    }
+  }
+
+  /*** END ABOUT ***/
+
+  /*** SKILLS ***/
+
+  .skills {
+
+    &__content {
+      font-size: 32px;
+    }
+
+    &-item {
+      width: calc(50% - 10px);
+      margin-right: 20px;
+    }
+
+    &-item:nth-child(3n) {
+      margin-right: 20px;
+    }
+
+    &-item:nth-child(2n) {
+      margin-right: 0;
+    }
+
+  }
+
+  /*** END SKILLS ***/
+
+  /*** PROJECTS ***/
+
+  .projects {
+    &__show-more {
+      font-size: 24px;
+      width: 100%;
+      padding: 15px 0;
+    }
+  }
+  /*** END PROJECTS ***/
+}
+
+@media screen and (max-width: 500px) {
+  /*** SKILLS ***/
+
+  .skills {
+    &-item {
+      width: 100%;
+      margin-right: 0 !important;
+    }
+  }
+
+  /*** END SKILLS ***/
+}

@@ -1,0 +1,56 @@
+/*** HEADER ***/
+
+.header {
+  background: $header_bg_color;
+  padding: 35px;
+
+  &-nav__menu {
+    display: flex;
+    justify-content: space-between;
+
+    & a {
+      position: relative;
+    }
+
+    & a::before,
+    & a::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      width: 0;
+      height: 1px;
+      background: #fff;
+      transition: all .5s ease;
+    }
+
+    & a::before {
+      left: 0;
+    }
+
+    & a::after {
+      right: 0;
+    }
+
+    & a:hover::before,
+    & a:hover::after {
+      width: 50%;
+    }
+  }
+}
+
+.hamburger-btn {
+  display: none;
+}
+
+.mobile-menu {
+  visibility: hidden;
+  position: fixed;
+  left: -350px;
+  top: 0;
+  height: 100%;
+  width: 350px;
+  background-color: $bg_color;
+  z-index: 99;
+  height: 100%;
+  padding: 45px;
+}
